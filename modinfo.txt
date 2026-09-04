@@ -1,0 +1,5 @@
+name = Advanced Cyberwarfare
+author = Sizzlefrost
+icon = gui/icons/icon_acw.png
+workshop = 1711205484 
+version = 1.8.8.52
