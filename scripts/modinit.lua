@@ -344,6 +344,9 @@ local function load( modApi, options, params )
                 if modManager:isDLCOptionEnabled(modID,optName) then
                     allowed = true
                 end
+            else
+            	-- no dependencies
+            	allowed = true
             end
 
             if allowed then
