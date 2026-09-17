@@ -255,7 +255,7 @@ local npc_abilities =
 
 		initiateBarricade = function( cell )
 			if not cell.exits then return end
-			for dir, exit in ipairs(cell.exits) do
+			for dir, exit in pairs(cell.exits) do
 				local doorIsSpecial = false
 				for i = 0,9 do -- base game only goes to 9, but what if mods?
 					if exit.keybits == 2^i then
@@ -291,7 +291,7 @@ local npc_abilities =
 
 		takedownBarricade = function( cell )
 			if not cell.exits then return end
-			for dir, exit in ipairs(cell.exits) do
+			for dir, exit in pairs(cell.exits) do
 				local exit = cell.exits[dir]
 				if simquery.isDoorExit(exit) and exit.SLF_barricade then
 					exit.keybits = exit.SLF_barricade.keybits
